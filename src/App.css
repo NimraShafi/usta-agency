@@ -1,0 +1,139 @@
+/* Main container to center the content */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000; /* Dark background */
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  overflow: hidden; /* Prevent any elements from overflowing the viewport */
+}
+
+/* Styling for the counting number */
+.count-display h1 {
+  font-size: 19px;
+  font-weight: 200;
+  margin-bottom: 20px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 5px;
+}
+
+/* Initially position letters above the screen */
+.letter {
+  display: inline-block;
+  opacity: 1; /* Visible by default */
+  transform: translateY(0); /* Initial position */
+  animation: fallAnimation 1.3s ease forwards; /* Apply animation directly */
+}
+
+/* Keyframes for the falling animation */
+@keyframes fallAnimation {
+  0% {
+    transform: translateY(0); /* Start at the current position */
+    opacity: 1; /* Fully visible */
+  }
+  30% {
+    transform: translateY(-20px); /* Move letter up slightly */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200px); /* Move letter down to its final position */
+    opacity: 0; /* Fade out */
+  }
+}
+/* x--------------------slpash----------------------------x------------------------------------------ */
+
+
+
+/* Animation for dropdown items */
+@keyframes itemFall {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes itemRise {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+.dropdown-item-show {
+  animation: itemFall 0.3s ease-out forwards;
+}
+
+.dropdown-item-hide {
+  animation: itemRise 0.3s ease-out forwards;
+}
+
+#cursor {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Keep cursor behind content */
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+
+#cursor-blur {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure the blur is behind */
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Hover effect when hovering over li */
+li:hover {
+  color: #ffffff; /* Ensure text color turns white on hover */
+  z-index: 2; /* Make the text hover above other elements */
+}
+
+/* Animation for text in nav items */
+.nav-item a {
+  position: relative;
+  color: rgb(255, 253, 253);
+  display: inline-block;
+  transition: color 0.3s, transform 0.3s ease-in-out;
+  padding: 5px 0;
+}
+
+.nav-item a:hover {
+  color: #000000; /* Text color on hover */
+  transform: translateX(-10px); /* Move text upwards when hovered */
+  z-index: 2; /* Ensure the text is above other elements on hover */
+}
+.logo:hover {
+  color: #000000; /* Text color on hover */
+  z-index: 2; /* Ensure the text is above other elements on hover */
+}
+/* x--------------------------navbar-------------------------------------------------------------x */
+.home {
+  background:"url(${wallpaper})";
+  height: 100vh;
+}
+
+
