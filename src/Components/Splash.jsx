@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../App.css'; // Ensure this is the correct path to your CSS file
+import './Splash.css'; // Ensure this is the correct path to your CSS file
 
 const Splash = () => {
   const [count, setCount] = useState(0);
@@ -39,7 +39,7 @@ const Splash = () => {
   return (
     <div className="container">
       <div className="count-display">
-        <h1>
+        <p>
           {showLetters ? (
             "USTA 100%".split("").map((letter, index) => (
               <span
@@ -55,7 +55,7 @@ const Splash = () => {
           ) : (
             `USTA ${count}%`
           )}
-        </h1>
+        </p>
       </div>
     </div>
   );

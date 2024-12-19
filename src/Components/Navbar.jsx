@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import CursorEffect from './CursorEffect';
+import "../Navbar.css";
 
 
 const Navbar = () => {
@@ -24,7 +25,7 @@ const Navbar = () => {
 
       <CursorEffect/>
     <nav className="bg-black text-white">
-      <div className=" mx-auto flex justify-between items-center py-2 px-6 group">
+      <div className="flex justify-between items-center py-2 px-6 group">
         <div className="text-2xl font-bold flex items-center">
     <svg 
       className="logo h-6 transition-colors duration-300 text-white " 
